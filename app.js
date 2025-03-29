@@ -163,8 +163,14 @@ app.get("/signUpPage", (req, res) => {
 
 
 //root route 
-app.get("/" , (req, res) => {
-    res.send("Hi i am root");
+app.get("/" ,  async (req, res) => {
+    try {
+        const allinfo = await BreedsInfo.find({});
+        res.render("home/landingPage.ejs", { allinfo });  
+    } catch (err) {
+        console.error("Error fetching cow data:", err);
+        res.status(500).send("Internal Server Error");
+    }
 });
 
 //setting up the server 
