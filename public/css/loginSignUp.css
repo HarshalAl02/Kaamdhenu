@@ -1,0 +1,142 @@
+/* Full-Page Background */
+body {
+    background: url("/images/backgroundimage.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    width: 100%;
+    text-align: left;
+}
+.register-container {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    width: 100%;
+    text-align: left;
+}
+/* Align Logo and Tagline Side by Side at the Same Level */
+.logo-section {
+    display: flex;
+    align-items: center; /* Aligns items at the same level */
+    justify-content: center; /* Aligns items to the left */
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+/* Circular Logo */
+.logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+/* Ensure text aligns properly with logo */
+.text-container {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 2px;
+}
+
+/* .brand-name {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #877e1afe;
+    margin: 0;
+} */
+
+/* .tagline {
+    font-size: 1.2rem;
+    color: var(--dark-text);
+    opacity: 0.9;
+    margin: 0;
+} */
+
+/* Form Inputs */
+.form-control {
+    border-radius: 5px;
+}
+
+/* Button */
+.btn-primary {
+    background: #5f6e0d;
+    border: none;
+}
+.btn-primary:hover {
+    background: #253601;
+}
+
+/* Forgot Password */
+.forgot-password {
+    font-size: 0.9rem;
+    color: #9a6218;
+    text-decoration: none;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+.divider-text {
+    padding: 0 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Signup Link */
+.signup-link {
+    font-size: 0.9rem;
+    text-align: center;
+}
+.signup-link a {
+    color: #9a6218;
+    text-decoration: none;
+}
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

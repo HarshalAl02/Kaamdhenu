@@ -1,0 +1,99 @@
+<% layout("/layouts/boilerplate") -%>
+
+<style>
+  body {
+    background: linear-gradient(to bottom right, #f4e7d3, #e8d8c3, #e3cfae);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .container {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-card {
+    background-color: #ffffff;
+    border: 2px solid #d4cdaa;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    max-width: 600px;
+    width: 100%;
+  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  }
+  
+  .logo {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #634c0d;
+  }
+  
+  .username {
+    color: #3b3a30;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .email, .contact, .location {
+    color: #5f5f5f;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  
+  .btn-primary {
+    background-color: #7c9a58;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #5f7e45;
+  }
+  
+  .btn-outline-primary {
+    border: 2px solid #7c9a58;
+    color: #7c9a58;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #7c9a58;
+    color: white;
+  }
+  </style>
+  
+  
+
+
+<div class="container">
+  <!-- Profile Section -->
+  <div id="profile-section" class="profile-card">
+    <div class="user-info text-center">
+      <img src="/images/Kaamdhenu.png" alt="Kamdhenu" class="logo" style="height: 150px; width: 150px;">
+      <h3 class="username"><%= user.name %></h3>
+      <p class="email"><%= user.email %></p>
+      <p class="contact">📞 <%= user.phone %></p>
+      <p class="location">📍 <%= user.location %></p>
+    </div>
+    <div class="d-grid gap-3">
+      <a href="/cow-form" class="btn btn-primary">🐄 Upload Cow Data</a>
+      <a href="/bull-form" class="btn btn-primary">🐂 Upload Bull Data</a>
+      <a href="/profile/viewData" class="btn btn-outline-primary">📋 View Data</a>
+    </div>
+  </div>
+</div>

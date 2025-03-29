@@ -1,0 +1,86 @@
+<% layout("/layouts/boilerplate") -%>
+
+
+<!-- Hero / Main content -->
+<section class="text-center py-5">
+  <h1>Welcome to Kaamdhenu</h1>
+  <p class="lead">Preserving Indigenous Cow Breeds for a Sustainable Future</p>
+</section>
+
+<!-- Animated Banner Section / Carousel -->
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="https://govigyan.com/wp-content/themes/govigyan/assets/images/govigyan/cow.jpg" class="d-block w-100" alt="Cow Fact 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Did You Know?</h5>
+        <p>Indigenous cow milk contains A2 beta-casein protein, which is easier to digest and healthier!</p>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="https://swadeshivip.com/blog/wp-content/uploads/2024/07/Red-Kandhari-Cattle-1024x573.jpg" class="d-block w-100" alt="Cow Fact 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Preserve Native Breeds</h5>
+        <p>Breeds like Gir, Sahiwal, and Rathi are known for their high immunity and adaptability.</p>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="https://www.organicgyaan.com/cdn/shop/articles/5fdbfb59592d5a2e4686019f16e10816.jpg?v=1688390883&width=970" class="d-block w-100" alt="Cow Fact 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Sacred and Sustainable</h5>
+        <p>Indian cows play a vital role in sustainable agriculture and cultural heritage.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Information Section -->
+<section id="cowInfoSection" class="cow-info-section mt-5">
+  <h2 class="text-center mb-4">Gau-Gyan</h2>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4">
+    <% for(let info of allinfo) { %>
+      <div class="col">
+        <div class="card info-card">
+          <img src="/images/<%= info.image %>" class="card-img-top" alt="<%= info.name %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= info.name %></h5>
+            <p class="card-text"><strong>Origin:</strong> <%= info.origin %></p>
+            <p class="card-text"><strong>Milk Yield:</strong> <%= info.milk_yield %></p>
+            <p class="card-text"><strong>Features:</strong> <%= info.features %></p>
+            <p class="card-text"><strong>Purpose:</strong> <%= info.purpose %></p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+
+<!-- Chatbot Section -->
+<div class="chatbot" id="chatbot">
+  <iframe src="https://kamdhenu-chatbot.onrender.com/" class="chatbot-frame"></iframe>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<div class="chatbot-toggle" onclick="toggleChatbot()">💬</div>
+
+<!-- JavaScript to Toggle Chatbot -->
+<script>
+  function toggleChatbot() {
+      var chatbot = document.getElementById("chatbot");
+      chatbot.classList.toggle("active");
+  }
+</script>

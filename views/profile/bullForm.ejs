@@ -1,0 +1,73 @@
+<% layout("/layouts/boilerplate") -%>
+
+<div class="container py-5">
+  <div class="profile-card bg-white p-4 shadow rounded-4" style="background-color: #fffdf5; border: 1px solid #dfd2b8;">
+    <h3 class="text-center mb-4 text-success">Upload Bull Data</h3>
+    <form action="/viewData" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="bullName" class="form-label">Name of Bull</label>
+        <input type="text" name="name" class="form-control" id="bullName" required>
+        <div class="invalid-feedback">Please enter the bull's name.</div>
+      </div>
+      <div class="mb-3">
+        <label for="bullBreed" class="form-label">Breed</label>
+        <input type="text" name="breed" class="form-control" id="bullBreed" required>
+        <div class="invalid-feedback">Please enter the breed.</div>
+      </div>
+      <div class="mb-3">
+        <label for="bullAge" class="form-label">Age (Years)</label>
+        <input type="number" name="age" class="form-control" id="bullAge" required>
+        <div class="invalid-feedback">Please provide the bull's age.</div>
+      </div>
+      <div class="mb-3">
+        <label for="healthCondition" class="form-label">Health Condition</label>
+        <select class="form-select" name="health_condition" id="healthCondition" required>
+          <option value="">Select Health Condition</option>
+          <option value="Healthy">Healthy</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Weak">Weak</option>
+        </select>
+        <div class="invalid-feedback">Please select the health condition.</div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" name="location" class="form-control" id="location" required>
+        <div class="invalid-feedback">Please enter the location.</div>
+      </div>
+      <div class="mb-3">
+        <label for="contactNumber" class="form-label">Owner's Contact Number</label>
+        <input type="tel" name="contact_number" class="form-control" id="contactNumber" required>
+        <div class="invalid-feedback">Please provide the contact number.</div>
+      </div>
+      <div class="mb-3">
+        <label for="temperament" class="form-label">Temperament</label>
+        <select class="form-select" name="temperament" id="temperament">
+          <option value="">Select Temperament</option>
+          <option value="Calm">Calm</option>
+          <option value="Aggressive">Aggressive</option>
+          <option value="Docile">Docile</option>
+          <option value="Nervous">Nervous</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="conformation" class="form-label">Conformation</label>
+        <select class="form-select" name="body_conformation" id="conformation">
+          <option value="">Select Conformation</option>
+          <option value="Strong">Strong</option>
+          <option value="Medium">Medium</option>
+          <option value="Heavy">Heavy</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="bullImage" class="form-label">Upload Bull Image</label>
+        <input type="file" name="image" class="form-control" id="bullImage" accept="image/*" required>
+        <div class="invalid-feedback">Please upload an image.</div>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-success">Upload Bull Data</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/script.js" defer></script>

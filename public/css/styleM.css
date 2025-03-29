@@ -1,0 +1,98 @@
+body {
+    background: linear-gradient(to bottom right, #f4e7d3, #e8d8c3, #e3cfae);
+    font-family: Arial, sans-serif;
+}
+
+/* Center logo and text container */
+.logo-section {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Aligns items in the middle */
+    gap: 15px;
+    margin-top: 30px; /* Adds some spacing from the top */
+}
+
+/* Circular Logo */
+.logo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%; /* Makes the logo circular */
+    object-fit: cover;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #BC6C25;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a3360f;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    height: 350px;
+    width: 100%; 
+    object-fit: contain; 
+    background-color: #f8f9fa;
+    padding: 10px; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #606C38;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #283618;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #c2c5aa;
+}
+
+.back-btn-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 30px; 
+}
+
+
+/* Hide and Show Sections */
+.d-none {
+    display: none;
+}
